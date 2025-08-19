@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "90e8aa46-f46c-4485-a70f-2cda59b6ecee",
+		"name": "School Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47724461",
+		"_collection_link": "https://vaishnavigajanandeshmukh-8379947.postman.co/workspace/Vaishnavi's-Workspace~cbed4a67-7c39-4891-85de-b1b596703963/collection/47724461-90e8aa46-f46c-4485-a70f-2cda59b6ecee?action=share&source=collection_link&creator=47724461"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add School",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ABC Public School\",\r\n  \"address\": \"Kothrud, Pune\",\r\n  \"latitude\": 18.5074,\r\n  \"longitude\": 73.8077\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listSchools?lat=21.1458&lng=79.0882",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "21.1458"
+						},
+						{
+							"key": "lng",
+							"value": "79.0882"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
